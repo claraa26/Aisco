@@ -11,4 +11,5 @@
 	<feature name="DirectPayment"/>
 	<feature name="PaymentGateway"/>
 	<feature name="EWallet"/>
+	<feature name="TransferBank"/>
 </configuration>

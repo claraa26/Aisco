@@ -28,5 +28,8 @@
 	],
 	"EWallet": [
 		"aisco.donation.ewallet"
+	],
+	"TransferBank": [
+		"aisco.donation.transferbank"
 	]
 }

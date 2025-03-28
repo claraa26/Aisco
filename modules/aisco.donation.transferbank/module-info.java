@@ -1,6 +1,6 @@
-module aisco.donation.ewallet{
+module aisco.donation.transferbank{
     requires aisco.donation.core;
-    exports aisco.donation.ewallet;
+    exports aisco.donation.transferbank;
     requires java.logging;
     requires payment.page.core;
 }
