@@ -10,4 +10,5 @@
 	<feature name="Donation"/>
 	<feature name="DirectPayment"/>
 	<feature name="PaymentGateway"/>
+	<feature name="EWallet"/>
 </configuration>

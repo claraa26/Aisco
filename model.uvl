@@ -14,7 +14,8 @@ features
 					Expense
 		optional
 			Donation {abstract true}
-				alternative
+				optional
 					DirectPayment
 					PaymentGateway
+					EWallet
 

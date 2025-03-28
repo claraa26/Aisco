@@ -1,6 +1,6 @@
-module aisco.donation.pgateway{
+module aisco.donation.ewallet{
     requires aisco.donation.core;
-    exports aisco.donation.pgateway;
+    exports aisco.donation.ewallet;
     requires java.logging;
     requires payment.page.core;
 }

@@ -4,7 +4,6 @@
 	<feature automatic="selected" name="Program"/>
 	<feature manual="selected" name="Activity"/>
 	<feature name="Operational"/>
-	<feature name="Voluntrip"/>
 	<feature automatic="selected" name="FinancialReport"/>
 	<feature automatic="selected" name="Income"/>
 	<feature name="Expense"/>
@@ -12,6 +11,4 @@
 	<feature name="DirectPayment"/>
 	<feature name="PaymentGateway"/>
 	<feature name="EWallet"/>
-	<feature name="TransferVA"/>
-	<feature name="TransferBank"/>
 </configuration>
