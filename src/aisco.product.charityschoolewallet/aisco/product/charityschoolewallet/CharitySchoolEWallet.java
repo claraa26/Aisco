@@ -1,21 +1,23 @@
-package aisco.product.charityschoolnopayment;
+package aisco.product.charityschoolewallet;
 
 import aisco.program.ProgramFactory;
 import aisco.program.core.Program;
 import aisco.financialreport.FinancialReportFactory;
 import aisco.financialreport.core.FinancialReport;
-
+import aisco.donation.DonationFactory;
+import aisco.donation.core.Donation;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class CharitySchoolNoPayment {
+public class CharitySchoolEWallet {
 	private static Program activityProgram;
 	private static Program operationalProgram;
 	private static FinancialReport financialreportFinancialReport;
 	private static FinancialReport incomeFinancialReport;
 	private static FinancialReport expenseFinancialReport;
+	private static Donation donationDonation;
+	private static Donation ewalletDonation;
 	
 	private static final int INDEX_SCHOOL = 0;
 	private static final int INDEX_LIBRARY = 1;
@@ -23,7 +25,7 @@ public class CharitySchoolNoPayment {
 	
 	private static FinancialReport income1;
 	private static FinancialReport expense1;
-
+	
 	public static List<Program> addProgram()
 	{
 	    System.out.println("\n Programs: ");
@@ -61,7 +63,7 @@ public class CharitySchoolNoPayment {
 	        programs.add(INDEX_LIBRARY, freelibrary);
 	        programs.add(INDEX_ELECTRICITY, paymentelectricity);
 	        return programs;
-	    }
+	}
 	
 	public static List<FinancialReport> addIncome(List<Program> programs)
     {
@@ -126,8 +128,8 @@ public class CharitySchoolNoPayment {
         );
         return incomes;
     }
-	
-	public static List<FinancialReport> addExpense(List<Program> programs)
+    
+    public static List<FinancialReport> addExpense(List<Program> programs)
     {
         List<FinancialReport> expenses = new ArrayList<>();
         expense1 = FinancialReportFactory.createFinancialReport(
@@ -172,6 +174,12 @@ public class CharitySchoolNoPayment {
         return expenses;
     }
 
+    public static void addDonation()
+    {
+        Donation donate = DonationFactory.createDonation("aisco.donation.ewallet.DonationImpl");
+        donate.addDonation();
+        donate.getDonation();
+    }
 
     public static void main(String[] args) {
         System.out.println("Product Charity School");
@@ -188,10 +196,8 @@ public class CharitySchoolNoPayment {
         System.out.println(expenses);
         int totalexpense = ((aisco.financialreport.expense.FinancialReportImpl) expense1).total(expenses);
 
-    
+        addDonation();
         int balance = totalincome - totalexpense;
         System.out.println("Balance: " + balance);
     }
-	
-
 }
